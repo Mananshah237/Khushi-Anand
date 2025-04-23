@@ -45,7 +45,7 @@ export default function VenueAndStay() {
               <div className="absolute -inset-4 border border-gold/10 rounded-xl"></div>
               <div className="relative overflow-hidden rounded-xl shadow-xl h-auto md:h-96">
                 <Image
-                  src="/placeholder.svg?height=800&width=1600"
+                  src="/placeholder.730?height=800&width=1600"
                   alt="Taj Vivanta Ahmedabad"
                   fill
                   className="object-cover"

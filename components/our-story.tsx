@@ -57,7 +57,7 @@ export default function OurStory() {
                 <div className="absolute -inset-4 border border-gold/20 rounded-lg transform -rotate-2"></div>
                 <div className="relative overflow-hidden rounded-lg shadow-xl">
                   <Image
-                    src="/placeholder.svg?height=600&width=800"
+                    src="/placeholder.jpg?height=600&width=800"
                     alt="Khushi and Anand together"
                     width={800}
                     height={600}
