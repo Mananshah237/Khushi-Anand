@@ -63,7 +63,7 @@ export default function Events() {
                     <div className="flex items-center gap-4 mb-6">
                       <MapPin className="h-5 w-5 text-gold" />
                       <div>
-                        <h5 className="font-medium text-gray-800">Anmol Farms</h5>
+                        <h5 className="font-medium text-gray-800">9 Brothers</h5>
                         <p className="text-gray-600">Ahmedabad</p>
                       </div>
                     </div>

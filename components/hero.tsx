@@ -54,7 +54,7 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
           className="mb-6"
         >
-          <h2 className="text-xl md:text-2xl font-light text-gold mb-2">23rd January 2026</h2>
+          <h2 className="text-xl md:text-2xl text-gold mb-2 italic">23rd January 2026</h2>
           <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl text-dark-gold mb-4">
             Khushi <span className="font-dancing-script">&</span> Anand
           </h1>

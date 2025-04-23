@@ -13,7 +13,7 @@ export default function Timeline() {
 
   const timelineEvents = [
     {
-      date: "Jan 2024",
+      date: "Nov 2024",
       title: "A Match Arranged",
       description:
         "In the presence of both families, Khushi and Anand were introduced — not by chance, but by intention. What began as a traditional meeting quickly turned into something quietly meaningful.",
