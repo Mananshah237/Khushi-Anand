@@ -30,7 +30,6 @@ export default function Hero() {
 
     calculateTimeLeft()
     const timer = setInterval(calculateTimeLeft, 1000)
-
     return () => clearInterval(timer)
   }, [])
 
@@ -68,30 +67,17 @@ export default function Hero() {
           transition={{ delay: 0.5, duration: 0.8 }}
           className="flex justify-center gap-4 md:gap-8 my-8"
         >
-          <div className="flex flex-col items-center">
-            <div className="bg-white/80 backdrop-blur-sm w-16 md:w-20 h-16 md:h-20 rounded-full flex items-center justify-center border border-gold/30 shadow-md">
-              <span className="font-serif text-2xl md:text-3xl text-dark-gold">{timeLeft.days}</span>
-            </div>
-            <span className="text-xs md:text-sm mt-2 text-gray-700">Days</span>
-          </div>
-          <div className="flex flex-col items-center">
-            <div className="bg-white/80 backdrop-blur-sm w-16 md:w-20 h-16 md:h-20 rounded-full flex items-center justify-center border border-gold/30 shadow-md">
-              <span className="font-serif text-2xl md:text-3xl text-dark-gold">{timeLeft.hours}</span>
-            </div>
-            <span className="text-xs md:text-sm mt-2 text-gray-700">Hours</span>
-          </div>
-          <div className="flex flex-col items-center">
-            <div className="bg-white/80 backdrop-blur-sm w-16 md:w-20 h-16 md:h-20 rounded-full flex items-center justify-center border border-gold/30 shadow-md">
-              <span className="font-serif text-2xl md:text-3xl text-dark-gold">{timeLeft.minutes}</span>
-            </div>
-            <span className="text-xs md:text-sm mt-2 text-gray-700">Minutes</span>
-          </div>
-          <div className="flex flex-col items-center">
-            <div className="bg-white/80 backdrop-blur-sm w-16 md:w-20 h-16 md:h-20 rounded-full flex items-center justify-center border border-gold/30 shadow-md">
-              <span className="font-serif text-2xl md:text-3xl text-dark-gold">{timeLeft.seconds}</span>
-            </div>
-            <span className="text-xs md:text-sm mt-2 text-gray-700">Seconds</span>
-          </div>
+          {["Days", "Hours", "Minutes", "Seconds"].map((label, i) => {
+            const value = [timeLeft.days, timeLeft.hours, timeLeft.minutes, timeLeft.seconds][i]
+            return (
+              <div key={label} className="flex flex-col items-center">
+                <div className="bg-white/80 backdrop-blur-sm w-16 md:w-20 h-16 md:h-20 rounded-full flex items-center justify-center border border-gold/30 shadow-md">
+                  <span className="font-serif text-2xl md:text-3xl text-dark-gold">{value}</span>
+                </div>
+                <span className="text-xs md:text-sm mt-2 text-gray-700">{label}</span>
+              </div>
+            )
+          })}
         </motion.div>
 
         <motion.div
@@ -109,7 +95,7 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      <div className="absolute bottom-8 left-0 right-0 flex justify-center animate-bounce">
+      <div className="absolute bottom-8 left-0 right-0 flex justify-center animate-bounce-slow">
         <a href="#our-story" className="text-gold">
           <svg
             xmlns="http://www.w3.org/2000/svg"

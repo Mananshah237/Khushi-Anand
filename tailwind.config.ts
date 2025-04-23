@@ -2,6 +2,9 @@ import type { Config } from "tailwindcss"
 
 const config: Config = {
   darkMode: ["class"],
+  animation: {
+    'bounce-slow': 'bounce 3s infinite',
+  },  
   content: [
     "./pages/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",

@@ -44,11 +44,11 @@ export default function Events() {
                       <h3 className="font-serif text-3xl text-white mb-2">Sangeet</h3>
                       <div className="flex items-center gap-2 text-white/90 mb-1">
                         <Calendar className="h-4 w-4 text-gold" />
-                        <span>January 21st, 2026</span>
+                        <span>January 22st, 2026</span>
                       </div>
                       <div className="flex items-center gap-2 text-white/90 mb-1">
                         <Clock className="h-4 w-4 text-gold" />
-                        <span>7:00 PM onwards</span>
+                        <span>6:00 PM onwards</span>
                       </div>
                     </div>
                   </div>
@@ -65,7 +65,7 @@ export default function Events() {
                     <div className="flex items-center gap-4 mb-6">
                       <MapPin className="h-5 w-5 text-gold" />
                       <div>
-                        <h5 className="font-medium text-gray-800">Taj Vivanta</h5>
+                        <h5 className="font-medium text-gray-800">Anmol Farms</h5>
                         <p className="text-gray-600">Ahmedabad</p>
                       </div>
                     </div>
@@ -98,14 +98,14 @@ export default function Events() {
                     <div className="flex items-center gap-4 mb-6">
                       <MapPin className="h-5 w-5 text-gold" />
                       <div>
-                        <h5 className="font-medium text-gray-800">Taj Vivanta</h5>
+                        <h5 className="font-medium text-gray-800">Gravity Greens</h5>
                         <p className="text-gray-600">Ahmedabad</p>
                       </div>
                     </div>
 
                     <div className="bg-gold/10 p-4 rounded-lg">
                       <h5 className="font-medium text-dark-gold mb-2">Dress Code</h5>
-                      <p className="text-gray-700">Traditional Red & Gold</p>
+                      <p className="text-gray-700">Traditional</p>
                     </div>
                   </div>
                 </div>
@@ -129,7 +129,7 @@ export default function Events() {
                       </div>
                       <div className="flex items-center gap-2 text-white/90 mb-1">
                         <Clock className="h-4 w-4 text-gold" />
-                        <span>6:00 PM onwards</span>
+                        <span>4:00 PM onwards</span>
                       </div>
                     </div>
                   </div>

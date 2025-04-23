@@ -14,6 +14,7 @@ export default function VenueAndStay() {
 
   return (
     <section id="venue" ref={ref} className="py-20 bg-ivory relative overflow-hidden">
+      {/* Floral overlay background */}
       <div className="absolute inset-0 bg-[url('/floral-overlay.svg')] bg-repeat opacity-10"></div>
 
       <div className="container mx-auto px-4">
@@ -21,18 +22,20 @@ export default function VenueAndStay() {
 
         <div className="max-w-6xl mx-auto">
           <div className="relative">
+            {/* Intro Text */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.8 }}
-              className="text-center mb-12 max-w-3xl mx-auto"
+              className="text-center mb-12 max-w-3xl mx-auto px-2"
             >
-              <p className="text-gray-700 leading-relaxed text-lg">
-                All wedding events will take place at the luxurious Taj Vivanta in Ahmedabad. We've arranged
-                accommodations for our guests with shuttle service to all events.
+              <p className="text-gray-700 leading-relaxed text-base sm:text-lg">
+                All wedding events will take place at the luxurious Taj Vivanta in Ahmedabad.
+                We've arranged accommodations for our guests with shuttle service to all events.
               </p>
             </motion.div>
 
+            {/* Image + Cards */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
@@ -40,7 +43,7 @@ export default function VenueAndStay() {
               className="relative"
             >
               <div className="absolute -inset-4 border border-gold/10 rounded-xl"></div>
-              <div className="relative overflow-hidden rounded-xl shadow-xl h-96">
+              <div className="relative overflow-hidden rounded-xl shadow-xl h-auto md:h-96">
                 <Image
                   src="/placeholder.svg?height=800&width=1600"
                   alt="Taj Vivanta Ahmedabad"
@@ -49,34 +52,38 @@ export default function VenueAndStay() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
 
-                <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
-                  <div className="grid md:grid-cols-3 gap-6">
-                    <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg border border-white/20">
+                {/* Cards Content */}
+                <div className="relative md:absolute bottom-0 left-0 right-0 p-6 sm:p-8 text-white">
+                  <div className="flex flex-col gap-4 md:grid md:grid-cols-3">
+                    {/* Card 1 */}
+                    <div className="bg-white/90 md:bg-white/10 text-gray-800 md:text-white backdrop-blur-sm p-4 rounded-lg border border-gold/20 shadow-md">
                       <div className="flex items-center gap-2 mb-2">
                         <MapPin className="h-5 w-5 text-gold" />
-                        <h4 className="font-serif text-xl">Location</h4>
+                        <h4 className="font-serif text-lg">Location</h4>
                       </div>
-                      <p className="text-white/90">
+                      <p className="text-sm leading-relaxed">
                         Taj Vivanta, Sindhubhavan Marg, Off SG Highway, Ahmedabad, Gujarat 380058
                       </p>
                     </div>
 
-                    <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg border border-white/20">
+                    {/* Card 2 */}
+                    <div className="bg-white/90 md:bg-white/10 text-gray-800 md:text-white backdrop-blur-sm p-4 rounded-lg border border-gold/20 shadow-md">
                       <div className="flex items-center gap-2 mb-2">
                         <Bus className="h-5 w-5 text-gold" />
-                        <h4 className="font-serif text-xl">Transportation</h4>
+                        <h4 className="font-serif text-lg">Transportation</h4>
                       </div>
-                      <p className="text-white/90">
+                      <p className="text-sm leading-relaxed">
                         Shuttles will be arranged from the hotel to all event venues. Schedule provided upon check-in.
                       </p>
                     </div>
 
-                    <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg border border-white/20">
+                    {/* Card 3 */}
+                    <div className="bg-white/90 md:bg-white/10 text-gray-800 md:text-white backdrop-blur-sm p-4 rounded-lg border border-gold/20 shadow-md">
                       <div className="flex items-center gap-2 mb-2">
                         <Phone className="h-5 w-5 text-gold" />
-                        <h4 className="font-serif text-xl">Contact</h4>
+                        <h4 className="font-serif text-lg">Contact</h4>
                       </div>
-                      <p className="text-white/90">
+                      <p className="text-sm leading-relaxed">
                         For accommodation queries, please contact our wedding coordinator at +91 98765 43210
                       </p>
                     </div>
