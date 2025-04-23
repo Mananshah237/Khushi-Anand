@@ -29,19 +29,16 @@ export default function OurStory() {
               className="order-2 md:order-1"
             >
               <div className="prose prose-lg">
-                <p className="text-gray-700 leading-relaxed">
-                  Our story began in the summer of 2020, when fate brought us together at a mutual friend's wedding in
-                  Mumbai. What started as casual conversations over wedding preparations blossomed into something
-                  beautiful.
-                </p>
-                <p className="text-gray-700 leading-relaxed">
-                  Despite the distance between us, we found ourselves drawn to each other's worlds. Through countless
-                  video calls, surprise visits, and shared dreams, our love grew stronger with each passing day.
-                </p>
-                <p className="text-gray-700 leading-relaxed font-medium">
-                  Now, after five years of cherishing each moment together, we're ready to begin our forever.
-                </p>
-                <div className="mt-6">
+              <p className="text-gray-700 leading-relaxed text-base sm:text-lg">
+  In a world full of swipes and DMs, theirs is a story written the old-fashioned way — not by chance, but by choice.  
+  <br /><br />
+  Khushi and Anand met through their families, introduced not by algorithms, but by well-intentioned elders who just knew. What began as a polite conversation over chai slowly turned into something deeper — an unspoken comfort, an effortless laughter, a sense of “this feels right.”
+  <br /><br />
+  What makes their story romantic isn’t how they met — it’s how they chose to stay. With every call, every shared smile, and every plan for the future, they discovered a bond built not on coincidence, but commitment.
+  <br /><br />
+  Two hearts, two families, and one beautiful beginning. This is not a love-at-first-sight story. This is a love-that-grew story. And they wouldn’t have it any other way.
+</p>
+  <div className="mt-6">
                   <div className="inline-block bg-gold/10 px-4 py-2 rounded-lg border border-gold/20">
                     <p className="font-dancing-script text-2xl text-dark-gold m-0">Khushi & Anand</p>
                   </div>

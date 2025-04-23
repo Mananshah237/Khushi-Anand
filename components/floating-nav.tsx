@@ -17,8 +17,8 @@ export default function FloatingNav() {
   const sections = [
     { id: 'our-story', label: 'Our Story' },
     { id: 'events', label: 'Events' },
-    { id: 'timeline', label: 'Timeline' },
     { id: 'venue', label: 'Venue' },
+    { id: 'timeline', label: 'Timeline' },
     { id: 'rsvp', label: 'RSVP' },
   ]
 

@@ -30,7 +30,7 @@ export default function VenueAndStay() {
               className="text-center mb-12 max-w-3xl mx-auto px-2"
             >
               <p className="text-gray-700 leading-relaxed text-base sm:text-lg">
-                All wedding events will take place at the luxurious Taj Vivanta in Ahmedabad.
+                All wedding events will take place in Ahmedabad.
                 We've arranged accommodations for our guests with shuttle service to all events.
               </p>
             </motion.div>

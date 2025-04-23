@@ -3,7 +3,7 @@
 import { useInView } from "react-intersection-observer"
 import { motion } from "framer-motion"
 import SectionTitle from "./section-title"
-import { Calendar, Heart, Coffee, Plane, BellRingIcon as Ring, Camera } from "lucide-react"
+import { Calendar, Heart, Users, Music, Diamond, Sparkles } from "lucide-react"
 
 export default function Timeline() {
   const [ref, inView] = useInView({
@@ -13,43 +13,46 @@ export default function Timeline() {
 
   const timelineEvents = [
     {
-      date: "Summer 2020",
-      title: "First Meeting",
+      date: "Jan 2024",
+      title: "A Match Arranged",
       description:
-        "We met at a mutual friend's wedding in Mumbai. Khushi was helping with decorations while Anand was the groom's childhood friend.",
+        "In the presence of both families, Khushi and Anand were introduced — not by chance, but by intention. What began as a traditional meeting quickly turned into something quietly meaningful.",
+      icon: <Users className="h-6 w-6 text-gold" />,
+    },
+    {
+      date: "March 2024",
+      title: "Growing Closer",
+      description:
+        "Through calls, conversations, and shared values, Khushi and Anand began discovering the beauty of a bond rooted in understanding — a friendship gently unfolding into something more.",
       icon: <Heart className="h-6 w-6 text-gold" />,
     },
     {
-      date: "October 2020",
-      title: "First Date",
-      description: "After weeks of calls, we finally had our first official date at a quaint café in Ahmedabad.",
-      icon: <Coffee className="h-6 w-6 text-gold" />,
-    },
-    {
-      date: "February 2021",
-      title: "First Trip Together",
+      date: "June 2024",
+      title: "Gol Dhana",
       description:
-        "We took our first vacation together to Udaipur, exploring the city of lakes and making unforgettable memories.",
-      icon: <Plane className="h-6 w-6 text-gold" />,
+        "Surrounded by loved ones, Khushi and Anand received blessings in an elegant engagement celebration — the beginning of a journey written with sincerity and excitement.",
+      icon: <Diamond className="h-6 w-6 text-gold" />,
     },
     {
-      date: "December 2022",
-      title: "Moving In",
-      description: "Khushi moved to Ahmedabad, and we began building our home together.",
+      date: "Jan 2025",
+      title: "Ready Set Go",
+      description:
+        "Both the Families came together to decide the auspicious day for the wedding, the hardest task ever, but with excellent matureness, A date was decided.",
+      icon: <Music className="h-6 w-6 text-gold" />,
+    },
+    {
+      date: "January 23, 2026",
+      title: "Wedding Ceremony",
+      description:
+        "Under the warmth of rituals and blessings, Khushi and Anand tied the knot — surrounded by everyone who shaped their lives. A day that marked the start of their forever.",
+      icon: <Sparkles className="h-6 w-6 text-gold" />,
+    },
+    {
+      date: "Forever Bonded - No returns",
+      title: "Happily ever After",
+      description:
+        "This isn’t the end of a story — it’s just the beginning. With love, patience, and purpose, Khushi & Anand walk into a future hand in hand, heart with heart.",
       icon: <Calendar className="h-6 w-6 text-gold" />,
-    },
-    {
-      date: "April 2025",
-      title: "The Proposal",
-      description:
-        "During a surprise trip to Goa, Anand proposed at sunset on the beach with a ring that had been in his family for generations.",
-      icon: <Ring className="h-6 w-6 text-gold" />,
-    },
-    {
-      date: "June 2025",
-      title: "Engagement",
-      description: "We celebrated our engagement with a small ceremony surrounded by our closest family and friends.",
-      icon: <Camera className="h-6 w-6 text-gold" />,
     },
   ]
 
@@ -60,9 +63,14 @@ export default function Timeline() {
       <div className="container mx-auto px-4">
         <SectionTitle>Our Journey</SectionTitle>
 
+        <div className="text-center max-w-2xl mx-auto mb-12 text-gray-700 text-base sm:text-lg leading-relaxed">
+          Every love story unfolds differently — some fast, some slow, some arranged.  
+          <br /><br />
+          Khushi & Anand’s journey began with tradition and blossomed into something deeply romantic — a connection nurtured with intention, warmth, and grace.
+        </div>
+
         <div className="max-w-4xl mx-auto">
           <div className="relative">
-            {/* Vertical line */}
             <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gold/30"></div>
 
             {timelineEvents.map((event, index) => (
@@ -89,7 +97,6 @@ export default function Timeline() {
                   <p className="text-gray-700">{event.description}</p>
                 </div>
 
-                {/* Circle on timeline */}
                 <div className="absolute top-2 left-1/2 transform -translate-x-1/2 md:translate-y-1 w-6 h-6 rounded-full bg-white border-2 border-gold flex items-center justify-center">
                   <div className="w-2 h-2 rounded-full bg-gold"></div>
                 </div>
