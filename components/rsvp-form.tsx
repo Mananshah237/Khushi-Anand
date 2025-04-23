@@ -3,15 +3,38 @@
 import { useInView } from "react-intersection-observer"
 import { motion } from "framer-motion"
 import SectionTitle from "./section-title"
+import { useState } from "react"
 
 export default function RsvpForm() {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  })
+  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 })
+  const [showSuccess, setShowSuccess] = useState(false)
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+
+    const form = e.currentTarget
+    const formData = new FormData(form)
+
+    try {
+      await fetch("https://script.google.com/macros/s/AKfycbwHusN4LHRBAwShBNauXXX9roIjAC3-rBCdN-2LWQAHdlkWVa2HYzYlU13lAnAYP1w5pQ/exec", {
+        method: "POST",
+        body: formData,
+      })
+
+      setShowSuccess(true)
+      form.reset()
+    } catch (error) {
+      alert("Something went wrong. Please try again.")
+      console.error(error)
+    }
+  }
 
   return (
-    <section id="rsvp" ref={ref} className="py-20 bg-gradient-to-br from-ivory via-white to-blush relative overflow-hidden">
+    <section
+      id="rsvp"
+      ref={ref}
+      className="py-20 bg-gradient-to-br from-ivory via-white to-blush relative overflow-hidden"
+    >
       <div className="container mx-auto px-4">
         <SectionTitle>RSVP</SectionTitle>
 
@@ -34,14 +57,7 @@ export default function RsvpForm() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="bg-white rounded-lg shadow-lg p-8 border border-gold/20 relative overflow-hidden"
           >
-            <form
-              action="https://script.google.com/macros/s/AKfycbwHusN4LHRBAwShBNauXXX9roIjAC3-rBCdN-2LWQAHdlkWVa2HYzYlU13lAnAYP1w5pQ/exec"
-              method="POST"
-              className="space-y-6"
-            >
-              {/* Keep user on-site after submission */}
-              <input type="hidden" name="_next" value="https://khushi-anand.vercel.app/#rsvp-success" />
-
+            <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
                   Full Name
@@ -114,16 +130,19 @@ export default function RsvpForm() {
             <div className="absolute bottom-0 left-0 w-24 h-24 -mb-6 -ml-6 bg-gold/5 rounded-full"></div>
           </motion.div>
 
-          {/* 🎉 Thank You Message (Redirects Here) */}
-          <div
-            id="rsvp-success"
-            className="mt-16 text-center bg-white/90 backdrop-blur-sm p-6 rounded-lg shadow-md border border-gold/10"
-          >
-            <h3 className="font-serif text-2xl text-dark-gold mb-2">Thank You!</h3>
-            <p className="text-gray-700 max-w-md mx-auto">
-              Your RSVP has been received. We can’t wait to celebrate this beautiful journey with you!
-            </p>
-          </div>
+          {showSuccess && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="mt-12 text-center bg-white/90 backdrop-blur-sm p-6 rounded-lg shadow-md border border-gold/10"
+            >
+              <h3 className="font-serif text-2xl text-dark-gold mb-2">Thank You!</h3>
+              <p className="text-gray-700 max-w-md mx-auto">
+                Your RSVP has been received. We can’t wait to celebrate this beautiful journey with you!
+              </p>
+            </motion.div>
+          )}
         </div>
       </div>
     </section>
