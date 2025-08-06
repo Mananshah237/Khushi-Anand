@@ -13,124 +13,92 @@ export default function Events() {
   })
 
   return (
-    <section id="events" ref={ref} className="py-20 bg-blush/10 relative overflow-hidden">
-      <div className="absolute inset-0 bg-[url('/floral-pattern.svg')] bg-repeat opacity-5"></div>
-
+    <section id="events" ref={ref} className="py-20 bg-ivory text-foreground">
       <div className="container mx-auto px-4">
         <SectionTitle>Wedding Events</SectionTitle>
 
-        <div className="max-w-5xl mx-auto">
-          <div className="grid gap-16">
+        <div className="max-w-5xl mx-auto grid gap-24">
 
-            {/* Sangeet Event */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-              transition={{ duration: 0.8 }}
-              className="relative"
-            >
-              <div className="grid md:grid-cols-2 gap-8 items-center">
-                <div className="relative">
-                  <div className="absolute -inset-4 bg-gold/5 rounded-lg"></div>
-                  <div className="relative w-full h-72 sm:h-96 overflow-hidden rounded-xl">
-                    <Image
-                      src="/Sangeet.png"
-                      alt="Sangeet Dress Code"
-                      fill
-                      className="object-cover"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                    <div className="absolute bottom-0 left-0 right-0 p-6">
-                      <h3 className="font-serif text-3xl text-white mb-2">Sangeet</h3>
-                      <div className="flex items-center gap-2 text-white/90 mb-1">
-                        <Calendar className="h-4 w-4 text-gold" />
-                        <span>January 22nd, 2026</span>
-                      </div>
-                      <div className="flex items-center gap-2 text-white/90 mb-1">
-                        <Clock className="h-4 w-4 text-gold" />
-                        <span>6:00 PM onwards</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+          {/* Sangeet */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+            transition={{ duration: 0.8 }}
+            className="grid md:grid-cols-2 gap-10"
+          >
+            <div className="relative aspect-[4/3] overflow-hidden rounded border border-border">
+              <Image
+                src="/Sangeet.png"
+                alt="Sangeet Dress Code"
+                fill
+                className="object-cover grayscale-[25%] contrast-[90%]"
+              />
+            </div>
 
-                <div className="flex flex-col">
-                  <div className="bg-white p-6 rounded-lg shadow-md border border-gold/20">
-                    <h4 className="font-serif text-2xl text-dark-gold mb-4">The Celebration</h4>
-                    <p className="text-gray-700 mb-6">
-                      Join us for a night of music, dance, and celebration as we kick off our wedding festivities with traditional Sangeet ceremonies.
-                    </p>
-                    <div className="flex items-center gap-4 mb-6">
-                      <MapPin className="h-5 w-5 text-gold" />
-                      <div>
-                        <h5 className="font-medium text-gray-800">9 Brothers</h5>
-                        <p className="text-gray-600">Ahmedabad</p>
-                      </div>
-                    </div>
-                    <div className="bg-gold/10 p-4 rounded-lg">
-                      <h5 className="font-medium text-dark-gold mb-2">Dress Code</h5>
-                      <p className="text-gray-700">Formal Western for Men & Women</p>
-                    </div>
-                  </div>
-                </div>
+            <div className="space-y-4 font-serif">
+              <h3 className="text-3xl font-bold">Sangeet</h3>
+              <div className="flex items-center gap-2 text-sm">
+                <Calendar className="h-4 w-4" />
+                <span>January 22nd, 2026</span>
               </div>
-            </motion.div>
-
-            {/* Wedding Ceremony Event */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative"
-            >
-              <div className="grid md:grid-cols-2 gap-8 items-center">
-                <div className="order-2 md:order-1 flex flex-col">
-                  <div className="bg-white p-6 rounded-lg shadow-md border border-gold/20">
-                    <h4 className="font-serif text-2xl text-dark-gold mb-4">The Ceremony</h4>
-                    <p className="text-gray-700 mb-6">
-                      We invite you to witness our union as we exchange vows and begin our journey together in a traditional wedding ceremony.
-                    </p>
-                    <div className="flex items-center gap-4 mb-6">
-                      <MapPin className="h-5 w-5 text-gold" />
-                      <div>
-                        <h5 className="font-medium text-gray-800">Gravity Greens</h5>
-                        <p className="text-gray-600">Ahmedabad</p>
-                      </div>
-                    </div>
-                    <div className="bg-gold/10 p-4 rounded-lg">
-                      <h5 className="font-medium text-dark-gold mb-2">Dress Code</h5>
-                      <p className="text-gray-700">Pastel Traditional Indian</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="order-1 md:order-2 relative">
-                  <div className="absolute -inset-4 bg-gold/5 rounded-lg"></div>
-                  <div className="relative w-full h-72 sm:h-96 overflow-hidden rounded-xl">
-                    <Image
-                      src="/Wedding.png"
-                      alt="Wedding Dress Code"
-                      fill
-                      className="object-cover"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                    <div className="absolute bottom-0 left-0 right-0 p-6">
-                      <h3 className="font-serif text-3xl text-white mb-2">Wedding Ceremony</h3>
-                      <div className="flex items-center gap-2 text-white/90 mb-1">
-                        <Calendar className="h-4 w-4 text-gold" />
-                        <span>January 23rd, 2026</span>
-                      </div>
-                      <div className="flex items-center gap-2 text-white/90 mb-1">
-                        <Clock className="h-4 w-4 text-gold" />
-                        <span>4:00 PM onwards</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              <div className="flex items-center gap-2 text-sm">
+                <Clock className="h-4 w-4" />
+                <span>6:00 PM onwards</span>
               </div>
-            </motion.div>
+              <div className="text-lg leading-relaxed">
+                Join us for a night of music, dance, and celebration as we kick off our wedding festivities with a joyous Sangeet.
+              </div>
+              <div>
+                <h4 className="text-base font-semibold">Venue</h4>
+                <p>9 Brothers, Ahmedabad</p>
+              </div>
+              <div className="border-t border-border pt-2">
+                <h4 className="text-base font-semibold">Dress Code</h4>
+                <p>Formal Western for Men & Women</p>
+              </div>
+            </div>
+          </motion.div>
 
-          </div>
+          {/* Wedding */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="grid md:grid-cols-2 gap-10"
+          >
+            <div className="order-2 md:order-1 space-y-4 font-serif">
+              <h3 className="text-3xl font-bold">Wedding Ceremony</h3>
+              <div className="flex items-center gap-2 text-sm">
+                <Calendar className="h-4 w-4" />
+                <span>January 23rd, 2026</span>
+              </div>
+              <div className="flex items-center gap-2 text-sm">
+                <Clock className="h-4 w-4" />
+                <span>4:00 PM onwards</span>
+              </div>
+              <div className="text-lg leading-relaxed">
+                We invite you to witness our union as we exchange vows in a traditional wedding ceremony surrounded by love and blessings.
+              </div>
+              <div>
+                <h4 className="text-base font-semibold">Venue</h4>
+                <p>Gravity Greens, Ahmedabad</p>
+              </div>
+              <div className="border-t border-border pt-2">
+                <h4 className="text-base font-semibold">Dress Code</h4>
+                <p>Pastel Traditional Indian</p>
+              </div>
+            </div>
+
+            <div className="order-1 md:order-2 relative aspect-[4/3] overflow-hidden rounded border border-border">
+              <Image
+                src="/Wedding.png"
+                alt="Wedding Dress Code"
+                fill
+                className="object-cover grayscale-[25%] contrast-[90%]"
+              />
+            </div>
+          </motion.div>
+
         </div>
       </div>
     </section>

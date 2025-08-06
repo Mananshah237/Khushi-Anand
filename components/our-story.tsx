@@ -15,7 +15,7 @@ export default function OurStory() {
     <section id="our-story" ref={ref} className="py-20 bg-ivory relative overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-white/50 to-transparent"></div>
       <div className="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-white/50 to-transparent"></div>
-      <div className="absolute inset-0 bg-[url('/floral-overlay.svg')] bg-repeat opacity-10"></div>
+     <div className="absolute inset-0 bg-paper pointer-events-none"></div>
 
       <div className="container mx-auto px-4">
         <SectionTitle>Our Story</SectionTitle>

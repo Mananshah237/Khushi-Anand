@@ -34,18 +34,18 @@ export default function Hero() {
   }, [])
 
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative h-screen flex items-center justify-center overflow-hidden bg-ivory text-foreground font-serif">
       <div className="absolute inset-0 z-0">
         <Image
           src="/heropic.jpg?height=1080&width=1920"
           alt="Wedding background"
           fill
-          className="object-cover opacity-60"
+          className="object-cover opacity-40 grayscale"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-blush/30 to-ivory/90"></div>
-        <div className="absolute inset-0 bg-[url('/floral-overlay.svg')] bg-repeat opacity-20"></div>
-      </div>
+        <div className="absolute inset-0 bg-gradient-to-b from-white/10 to-ivory/95"></div>
+        
+  </div>
 
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
         <motion.div
@@ -54,27 +54,29 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
           className="mb-6"
         >
-          <h2 className="text-xl md:text-2xl text-gold mb-2 italic">23rd January 2026</h2>
-          <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl text-dark-gold mb-4">
-            Khushi <span className="font-dancing-script">&</span> Anand
+          <h2 className="text-lg md:text-xl text-accent italic tracking-wide mb-2">23rd January 2026</h2>
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-editorial text-primary mb-4">
+            Khushi <span className="italic font-normal">&</span> Anand
           </h1>
-          <p className="text-lg md:text-xl text-gray-700 italic">Join us in celebrating our journey of love</p>
+          <p className="text-md md:text-xl text-muted-foreground italic">
+            Join us in celebrating our journey of love
+          </p>
         </motion.div>
 
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 0.8 }}
-          className="flex justify-center gap-4 md:gap-8 my-8"
+          className="flex justify-center gap-4 md:gap-8 my-10"
         >
           {["Days", "Hours", "Minutes", "Seconds"].map((label, i) => {
             const value = [timeLeft.days, timeLeft.hours, timeLeft.minutes, timeLeft.seconds][i]
             return (
               <div key={label} className="flex flex-col items-center">
-                <div className="bg-white/80 backdrop-blur-sm w-16 md:w-20 h-16 md:h-20 rounded-full flex items-center justify-center border border-gold/30 shadow-md">
-                  <span className="font-serif text-2xl md:text-3xl text-dark-gold">{value}</span>
+                <div className="w-16 md:w-20 h-16 md:h-20 flex items-center justify-center border border-border rounded-full bg-white/70">
+                  <span className="text-2xl md:text-3xl text-primary">{value}</span>
                 </div>
-                <span className="text-xs md:text-sm mt-2 text-gray-700">{label}</span>
+                <span className="text-xs md:text-sm mt-2 text-muted-foreground">{label}</span>
               </div>
             )
           })}
@@ -88,7 +90,7 @@ export default function Hero() {
         >
           <a
             href="#rsvp"
-            className="inline-block bg-gold/90 hover:bg-gold text-white font-medium py-3 px-8 rounded-full shadow-md transition-all duration-300 hover:shadow-lg"
+            className="inline-block bg-primary text-white font-medium py-3 px-8 rounded-full transition-all duration-300 border border-primary hover:bg-white hover:text-primary"
           >
             RSVP Now
           </a>
@@ -96,7 +98,7 @@ export default function Hero() {
       </div>
 
       <div className="absolute bottom-8 left-0 right-0 flex justify-center animate-bounce-slow">
-        <a href="#our-story" className="text-gold">
+        <a href="#our-story" className="text-primary">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"

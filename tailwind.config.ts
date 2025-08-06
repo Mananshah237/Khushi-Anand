@@ -2,9 +2,6 @@ import type { Config } from "tailwindcss"
 
 const config: Config = {
   darkMode: ["class"],
-  animation: {
-    'bounce-slow': 'bounce 3s infinite',
-  },  
   content: [
     "./pages/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
@@ -22,43 +19,30 @@ const config: Config = {
     },
     extend: {
       colors: {
-        blush: "#f7cac9",
-        ivory: "#f7f1e3",
-        gold: "#d4af37",
-        "dark-gold": "#b8860b",
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
-        primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
-        },
-        secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
-        },
-        destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))",
-        },
-        muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
-        },
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
-        },
-        popover: {
-          DEFAULT: "hsl(var(--popover))",
-          foreground: "hsl(var(--popover-foreground))",
-        },
-        card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
-        },
+  background: "#f0ebe1", // soft newsprint beige
+  foreground: "#1a1a1a", // ink black
+  border: "#d6d2c4",     // parchment-gray border
+  muted: {
+    DEFAULT: "#e5e5e5",
+    foreground: "#6b7280",
+  },
+  primary: {
+    DEFAULT: "#1a1a1a",
+    foreground: "#ffffff",
+  },
+  accent: {
+    DEFAULT: "#444",
+    foreground: "#ffffff",
+  },
+  paper: "#f5f3e7",   // real newspaper paper tone
+  ink: "#222222",     // for body text
+  gold: "#bfa76f",
+  ivory: "#f9f7f1",
+},
+      fontFamily: {
+        serif: ['"Libre Baskerville"', "Georgia", "Times New Roman", "serif"], // elegant serif
+        sans: ['"Inter"', "Helvetica", "Arial", "sans-serif"],
+        editorial: ['"Playfair Display"', "serif"],
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -78,10 +62,14 @@ const config: Config = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "bounce-slow": "bounce 3s infinite",
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate"),
+    require("@tailwindcss/typography"), // editorial typography plugin
+  ],
 }
 
 export default config

@@ -2,57 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --blush: #f7cac9;
-  --ivory: #f7f1e3;
-  --gold: #d4af37;
-  --dark-gold: #b8860b;
+body {
+  @apply bg-background text-foreground font-serif;
+  font-size: 16px;
+  line-height: 1.75;
 }
 
-@layer base {
-  body {
-    @apply bg-ivory text-gray-800;
-  }
-
-  html {
-    scroll-behavior: smooth;
-  }
-
-  .font-serif {
-    font-family: var(--font-playfair), serif;
-  }
-
-  .font-dancing-script {
-    font-family: var(--font-dancing-script), cursive;
-  }
+h1, h2, h3, h4 {
+  @apply font-editorial text-primary;
 }
 
-@layer utilities {
-  .bg-blush {
-    background-color: var(--blush);
-  }
-
-  .bg-ivory {
-    background-color: var(--ivory);
-  }
-
-  .bg-gold {
-    background-color: var(--gold);
-  }
-
-  .bg-dark-gold {
-    background-color: var(--dark-gold);
-  }
-
-  .text-gold {
-    color: var(--gold);
-  }
-
-  .text-dark-gold {
-    color: var(--dark-gold);
-  }
-
-  .border-gold {
-    border-color: var(--gold);
-  }
+section {
+  @apply bg-background border-t border-border py-16;
 }
