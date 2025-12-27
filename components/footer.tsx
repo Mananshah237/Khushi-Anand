@@ -12,9 +12,9 @@ export default function Footer() {
 
   return (
     <footer ref={ref} className="py-12 bg-blush/20 relative overflow-hidden">
-      <div className="absolute inset-0 bg-[url('/floral-pattern.svg')] bg-repeat opacity-5"></div>
+      <div className="absolute inset-0 bg-[url('/floral-pattern.svg')] bg-repeat opacity-5 pointer-events-none"></div>
 
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 relative z-[60]">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
@@ -35,7 +35,9 @@ export default function Footer() {
             <span className="hidden sm:inline text-gray-400">|</span>
 
             <a
-              href="https://instagram.com/khushiandanand2026"
+              href="https://instagram.com/anandxkhushi"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-2 text-gray-700 hover:text-gold transition-colors duration-300"
             >
               <Instagram className="h-5 w-5" />
@@ -49,7 +51,7 @@ export default function Footer() {
         </motion.div>
       </div>
 
-      <div className="absolute bottom-0 left-0 right-0 h-16 bg-[url('/floral-footer.svg')] bg-repeat-x bg-bottom opacity-30"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-16 bg-[url('/floral-footer.svg')] bg-repeat-x bg-bottom opacity-30 pointer-events-none"></div>
     </footer>
   )
 }
