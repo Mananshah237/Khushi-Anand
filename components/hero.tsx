@@ -42,10 +42,11 @@ export default function Hero() {
           fill
           className="object-cover opacity-40 grayscale"
           priority
+          style={{ objectPosition: "center 80%" }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-white/10 to-ivory/95"></div>
-        
-  </div>
+
+      </div>
 
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
         <motion.div

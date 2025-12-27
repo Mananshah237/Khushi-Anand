@@ -19,30 +19,30 @@ const config: Config = {
     },
     extend: {
       colors: {
-  background: "#f0ebe1", // soft newsprint beige
-  foreground: "#1a1a1a", // ink black
-  border: "#d6d2c4",     // parchment-gray border
-  muted: {
-    DEFAULT: "#e5e5e5",
-    foreground: "#6b7280",
-  },
-  primary: {
-    DEFAULT: "#1a1a1a",
-    foreground: "#ffffff",
-  },
-  accent: {
-    DEFAULT: "#444",
-    foreground: "#ffffff",
-  },
-  paper: "#f5f3e7",   // real newspaper paper tone
-  ink: "#222222",     // for body text
-  gold: "#bfa76f",
-  ivory: "#f9f7f1",
-},
+        background: "#f0ebe1", // soft newsprint beige
+        foreground: "#1a1a1a", // ink black
+        border: "#d6d2c4",     // parchment-gray border
+        muted: {
+          DEFAULT: "#e5e5e5",
+          foreground: "#6b7280",
+        },
+        primary: {
+          DEFAULT: "#1a1a1a",
+          foreground: "#ffffff",
+        },
+        accent: {
+          DEFAULT: "#444",
+          foreground: "#ffffff",
+        },
+        paper: "#f5f3e7",   // real newspaper paper tone
+        ink: "#222222",     // for body text
+        gold: "#bfa76f",
+        ivory: "#f9f7f1",
+      },
       fontFamily: {
-        serif: ['"Libre Baskerville"', "Georgia", "Times New Roman", "serif"], // elegant serif
-        sans: ['"Inter"', "Helvetica", "Arial", "sans-serif"],
-        editorial: ['"Playfair Display"', "serif"],
+        serif: ["var(--font-playfair)", "serif"], // elegant serif
+        sans: ["var(--font-playfair)", "sans-serif"],
+        editorial: ["var(--font-playfair)", "serif"],
       },
       borderRadius: {
         lg: "var(--radius)",

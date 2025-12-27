@@ -49,6 +49,7 @@ export default function VenueAndStay() {
                   alt="Taj Vivanta Ahmedabad"
                   fill
                   className="object-cover"
+                  style={{ objectPosition: "center 47%" }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
 

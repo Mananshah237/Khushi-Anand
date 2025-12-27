@@ -46,7 +46,7 @@ export default function RsvpForm() {
             className="text-center mb-8"
           >
             <p className="text-gray-700">
-              We would be honored to have you celebrate with us!  
+              We would be honored to have you celebrate with us!
               Please take a moment to RSVP and let us know your plans.
             </p>
           </motion.div>
@@ -69,6 +69,7 @@ export default function RsvpForm() {
                   required
                   className="w-full px-4 py-2 border border-gray-300 rounded-md"
                   placeholder="Your name"
+                  suppressHydrationWarning
                 />
               </div>
 
@@ -80,6 +81,7 @@ export default function RsvpForm() {
                   id="attending"
                   name="attending"
                   className="w-full px-4 py-2 border border-gray-300 rounded-md"
+                  suppressHydrationWarning
                 >
                   <option value="yes">Yes, I will attend</option>
                   <option value="no">No, I cannot attend</option>
@@ -94,6 +96,7 @@ export default function RsvpForm() {
                   id="guests"
                   name="guests"
                   className="w-full px-4 py-2 border border-gray-300 rounded-md"
+                  suppressHydrationWarning
                 >
                   <option value="1">1</option>
                   <option value="2">2</option>
@@ -112,6 +115,7 @@ export default function RsvpForm() {
                   rows={3}
                   className="w-full px-4 py-2 border border-gray-300 rounded-md"
                   placeholder="Let us know if you have any dietary restrictions"
+                  suppressHydrationWarning
                 ></textarea>
               </div>
 
@@ -119,6 +123,7 @@ export default function RsvpForm() {
                 <button
                   type="submit"
                   className="w-full bg-gold hover:bg-dark-gold text-white font-medium py-3 px-4 rounded-md transition-colors duration-300"
+                  suppressHydrationWarning
                 >
                   Submit RSVP
                 </button>

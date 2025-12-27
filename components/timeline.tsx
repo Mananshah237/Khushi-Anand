@@ -64,7 +64,7 @@ export default function Timeline() {
     >
       <div className="absolute inset-0 bg-paper pointer-events-none"></div>
 
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 relative z-10">
         <SectionTitle>Our Journey</SectionTitle>
 
         <div className="text-center max-w-2xl mx-auto mb-12 text-muted-foreground text-base sm:text-lg leading-relaxed">
@@ -88,11 +88,10 @@ export default function Timeline() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 transition={{ duration: 0.6, delay: index * 0.15 }}
-                className={`relative mb-16 z-10 ${
-                  isEven
+                className={`relative mb-16 z-10 ${isEven
                     ? "md:pr-10 md:text-right md:ml-auto md:mr-1/2"
                     : "md:pl-10 md:ml-1/2"
-                } md:w-1/2`}
+                  } md:w-1/2`}
               >
                 {/* Date Badge */}
                 <div
@@ -107,9 +106,8 @@ export default function Timeline() {
 
                 {/* Content Card */}
                 <div
-                  className={`bg-white p-5 rounded-lg border border-border ${
-                    isEven ? "md:mr-6" : "md:ml-6"
-                  }`}
+                  className={`bg-white p-5 rounded-lg border border-border ${isEven ? "md:mr-6" : "md:ml-6"
+                    }`}
                 >
                   <div className="flex items-center gap-2 mb-2">
                     {event.icon}

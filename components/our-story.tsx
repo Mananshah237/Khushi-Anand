@@ -15,9 +15,9 @@ export default function OurStory() {
     <section id="our-story" ref={ref} className="py-20 bg-ivory relative overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-white/50 to-transparent"></div>
       <div className="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-white/50 to-transparent"></div>
-     <div className="absolute inset-0 bg-paper pointer-events-none"></div>
+      <div className="absolute inset-0 bg-paper pointer-events-none"></div>
 
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 relative z-10">
         <SectionTitle>Our Story</SectionTitle>
 
         <div className="max-w-5xl mx-auto">
@@ -29,16 +29,16 @@ export default function OurStory() {
               className="order-2 md:order-1"
             >
               <div className="prose prose-lg">
-              <p className="text-gray-700 leading-relaxed text-base sm:text-lg">
-  In a world full of swipes and DMs, theirs is a story written the old-fashioned way — not by chance, but by choice.  
-  <br /><br />
-  Khushi and Anand met through their families, introduced not by algorithms, but by well-intentioned elders who just knew. What began as a polite conversation over chai slowly turned into something deeper — an unspoken comfort, an effortless laughter, a sense of “this feels right.”
-  <br /><br />
-  What makes their story romantic isn’t how they met — it’s how they chose to stay. With every call, every shared smile, and every plan for the future, they discovered a bond built not on coincidence, but commitment.
-  <br /><br />
-  Two hearts, two families, and one beautiful beginning. This is not a love-at-first-sight story. This is a love-that-grew story. And they wouldn’t have it any other way.
-</p>
-  <div className="mt-6">
+                <p className="text-gray-700 leading-relaxed text-base sm:text-lg">
+                  In a world full of swipes and DMs, theirs is a story written the old-fashioned way — not by chance, but by choice.
+                  <br /><br />
+                  Khushi and Anand met through their families, introduced not by algorithms, but by well-intentioned elders who just knew. What began as a polite conversation over chai slowly turned into something deeper — an unspoken comfort, an effortless laughter, a sense of “this feels right.”
+                  <br /><br />
+                  What makes their story romantic isn’t how they met — it’s how they chose to stay. With every call, every shared smile, and every plan for the future, they discovered a bond built not on coincidence, but commitment.
+                  <br /><br />
+                  Two hearts, two families, and one beautiful beginning. This is not a love-at-first-sight story. This is a love-that-grew story. And they wouldn’t have it any other way.
+                </p>
+                <div className="mt-6">
                   <div className="inline-block bg-gold/10 px-4 py-2 rounded-lg border border-gold/20">
                     <p className="font-dancing-script text-2xl text-dark-gold m-0">Khushi & Anand</p>
                   </div>

@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import { Heart } from 'lucide-react'
+import Link from 'next/link'
 
 export default function FloatingNav() {
   const [visible, setVisible] = useState(false)
@@ -15,25 +16,26 @@ export default function FloatingNav() {
   }, [])
 
   const sections = [
-    { id: 'our-story', label: 'Our Story' },
-    { id: 'events', label: 'Events' },
-    { id: 'venue', label: 'Venue' },
-    { id: 'timeline', label: 'Timeline' },
-    { id: 'rsvp', label: 'RSVP' },
+    { href: '/#our-story', label: 'Our Story' },
+    { href: '/us-unscripted', label: 'Us, Unscripted' },
+    { href: '/#events', label: 'Events' },
+    { href: '/#venue', label: 'Venue' },
+    { href: '/#timeline', label: 'Timeline' },
+    { href: '/#rsvp', label: 'RSVP' },
   ]
 
   return (
     <>
       {/* Desktop Floating Nav */}
       <nav className="fixed top-6 right-6 z-50 hidden md:flex flex-col gap-3 items-end">
-        {sections.map(({ id, label }) => (
-          <a
-            key={id}
-            href={`#${id}`}
+        {sections.map(({ href, label }) => (
+          <Link
+            key={label}
+            href={href}
             className="bg-white/90 hover:bg-gold text-dark-gold hover:text-white px-4 py-2 rounded-full shadow-lg text-sm font-medium transition-colors duration-300"
           >
             {label}
-          </a>
+          </Link>
         ))}
       </nav>
 
@@ -44,14 +46,14 @@ export default function FloatingNav() {
             <Heart className="h-6 w-6" />
           </summary>
           <div className="absolute bottom-16 right-0 bg-white shadow-lg rounded-xl border border-gold/30 p-3 flex flex-col gap-2 text-sm w-40">
-            {sections.map(({ id, label }) => (
-              <a
-                key={id}
-                href={`#${id}`}
+            {sections.map(({ href, label }) => (
+              <Link
+                key={label}
+                href={href}
                 className="hover:text-gold transition-colors duration-200 text-dark-gold"
               >
                 {label}
-              </a>
+              </Link>
             ))}
           </div>
         </details>

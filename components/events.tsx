@@ -28,10 +28,11 @@ export default function Events() {
           >
             <div className="relative aspect-[4/3] overflow-hidden rounded border border-border">
               <Image
-                src="/Sangeet.png"
+                src="/Sangeet.jpg"
                 alt="Sangeet Dress Code"
                 fill
                 className="object-cover grayscale-[25%] contrast-[90%]"
+                style={{ objectPosition: "center 78%" }}
               />
             </div>
 
@@ -91,10 +92,11 @@ export default function Events() {
 
             <div className="order-1 md:order-2 relative aspect-[4/3] overflow-hidden rounded border border-border">
               <Image
-                src="/Wedding.png"
+                src="/Wedding.jpg"
                 alt="Wedding Dress Code"
                 fill
                 className="object-cover grayscale-[25%] contrast-[90%]"
+                style={{ objectPosition: "center 78%" }}
               />
             </div>
           </motion.div>
