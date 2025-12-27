@@ -35,13 +35,13 @@ export default function Footer() {
             <span className="hidden sm:inline text-gray-400">|</span>
 
             <a
-              href="https://instagram.com/anandxkhushi"
+              href="https://instagram.com/anand_x_khushi"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-gray-700 hover:text-gold transition-colors duration-300"
             >
               <Instagram className="h-5 w-5" />
-              <span>@anandxkhushi</span>
+              <span>@anand_x_khushi</span>
             </a>
           </div>
 
